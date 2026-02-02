@@ -1,0 +1,3 @@
+[submodule "rust-template-lib"]
+	path = rust-template-lib
+	url = https://github.com/lmeller-git/rust-template-lib.git
