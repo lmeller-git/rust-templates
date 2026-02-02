@@ -1,8 +1,7 @@
 [package]
-name = "rust-template-lib"
+name = "{{project-name}}"
 version = "0.1.0"
 edition = "2024"
-license = "MIT"
 
 [features]
 default = ["std"]
@@ -23,5 +22,5 @@ shuttle = "0.8.1"
 unexpected_cfgs = { level = "allow", check-cfg = ['cfg(loom)', 'cfg(shuttle)'] }
 
 [[bench]]
-name = "benchmarks"
+name = "{{project-name}}_benchmarks"
 harness = false
