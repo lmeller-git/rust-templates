@@ -1,8 +1,7 @@
 [package]
-name = "rust-template-lib"
+name = "lib-no_std-template"
 version = "0.1.0"
 edition = "2024"
-license = "MIT"
 
 [features]
 default = ["std"]
