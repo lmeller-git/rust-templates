@@ -1,1 +1,5 @@
 [template]
+exclude = [
+  ".github/**",
+]
+ignore = ["LICENSE", "./.github/build.yml"]

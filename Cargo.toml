@@ -1,0 +1,27 @@
+[package]
+name = "rust-template-lib"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+
+[features]
+default = ["std"]
+std = []
+
+[dependencies]
+
+[dev-dependencies]
+criterion = { version = "0.8.1", features = ["html_reports"] }
+
+[target.'cfg(loom)'.dependencies]
+loom = "0.7"
+
+[target.'cfg(shuttle)'.dependencies]
+shuttle = "0.8.1"
+
+[lints.rust]
+unexpected_cfgs = { level = "allow", check-cfg = ['cfg(loom)', 'cfg(shuttle)'] }
+
+[[bench]]
+name = "benchmarks"
+harness = false
