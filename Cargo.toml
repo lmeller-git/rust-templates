@@ -7,9 +7,6 @@ edition = "2024"
 
 [dependencies]
 
-[dev-dependencies]
-criterion = { version = "0.8.1", features = ["html_reports"] }
-
 [target.'cfg(loom)'.dependencies]
 loom = "0.7"
 
@@ -18,10 +15,6 @@ shuttle = "0.8.1"
 
 [lints.rust]
 unexpected_cfgs = { level = "allow", check-cfg = ['cfg(loom)', 'cfg(shuttle)'] }
-
-[[bench]]
-name = "benchmarks"
-harness = false
 
 [profile.dev]
 panic = "abort"

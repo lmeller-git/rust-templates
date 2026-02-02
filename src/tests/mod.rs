@@ -4,10 +4,13 @@ mod loom;
 #[cfg(shuttle)]
 mod shuttle;
 
-use crate::add;
+#[cfg(not(any(shuttle, loom)))]
+mod tests_inner {
+    use crate::add;
 
-#[test]
-fn it_works() {
-    let result = add(2, 2);
-    assert_eq!(result, 4);
+    #[test]
+    fn it_works() {
+        let result = add(2, 2);
+        assert_eq!(result, 4);
+    }
 }
