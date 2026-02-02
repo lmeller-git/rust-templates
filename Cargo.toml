@@ -1,11 +1,9 @@
 [package]
-name = "{{project-name}}"
+name = "bin-template"
 version = "0.1.0"
 edition = "2024"
 
 [features]
-default = ["std"]
-std = []
 
 [dependencies]
 
@@ -22,5 +20,11 @@ shuttle = "0.8.1"
 unexpected_cfgs = { level = "allow", check-cfg = ['cfg(loom)', 'cfg(shuttle)'] }
 
 [[bench]]
-name = "{{project-name}}_benchmarks"
+name = "benchmarks"
 harness = false
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
