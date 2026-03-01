@@ -1,0 +1,13 @@
+[package]
+name = "python-bindings"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+name = "lib_foo"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = "0.28.2"
