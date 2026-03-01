@@ -1,0 +1,15 @@
+[package]
+name = 'rust-templates'
+publish = false
+rust-version = '1.65'
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+crate-type = [ 'staticlib' ]
+name = 'rust-templates'
+
+[dependencies]
+extendr-api = '0.8.1'
