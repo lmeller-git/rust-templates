@@ -1,12 +1,12 @@
 [package]
-name = "python-bindings"
+name = "{{crate_name}}"
 version.workspace = true
 authors.workspace = true
 edition.workspace = true
 license.workspace = true
 
 [lib]
-name = "lib_foo"
+name = "{{crate_name}}"
 crate-type = ["cdylib"]
 
 [dependencies]

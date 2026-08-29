@@ -17,7 +17,7 @@ fn add_internal(left: u64, right: u64) -> u64 {
 }
 
 #[pymodule]
-fn lib_foo(m: &Bound<'_, PyModule>) -> PyResult<()> {
+fn {{crate_name}}(m: &Bound<'_, PyModule>) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(add, m)?)
 }
 

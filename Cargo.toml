@@ -9,9 +9,9 @@ default-members = [
 
 [workspace.package]
 version = "0.1.0"
-authors = []
+authors = ["{{authors}}"]
 edition = "2024"
-license = "MIT"
+license = "{{license}}"
 
 [workspace.dependencies]
 anyhow = "1.0.102"

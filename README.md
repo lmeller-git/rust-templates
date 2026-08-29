@@ -1,4 +1,4 @@
-# rust-templates
+# {{crate_name}}
 
 This repo contains various templates for rust projects. Templates are organized in branches.
 
