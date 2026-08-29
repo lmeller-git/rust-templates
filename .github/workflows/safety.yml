@@ -19,7 +19,7 @@ jobs:
   sanitizers:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # tag=v6.0.2
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # tag=v7.0.0
         with:
           submodules: true
       - name: Install nightly
@@ -57,7 +57,7 @@ jobs:
   miri:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # tag=v6.0.2
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # tag=v7.0.0
         with:
           submodules: true
       - run: |
@@ -72,14 +72,14 @@ jobs:
       - name: cargo miri test
         run: |
           rustup override set ${{ env.NIGHTLY }}
-          cargo miri test
+          cargo miri test --all-features
         env:
           MIRIFLAGS: ""
 
   loom:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # tag=v6.0.2
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # tag=v7.0.0
         with:
           submodules: true
       - name: Install stable
@@ -87,7 +87,7 @@ jobs:
         with:
           toolchain: stable
       - name: cargo test loom
-        run: cargo test --release --lib
+        run: cargo test --lib --all-features --release
         env:
           LOOM_MAX_PREEMPTIONS: 2
           RUSTFLAGS: "--cfg loom"
@@ -95,7 +95,7 @@ jobs:
   shuttle:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # tag=v6.0.2
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # tag=v7.0.0
         with:
           submodules: true
       - name: Install stable
@@ -103,6 +103,20 @@ jobs:
         with:
           toolchain: stable
       - name: cargo test shuttle
-        run: cargo test --release --lib
+        run: cargo test --lib --all-features
         env:
           RUSTFLAGS: "--cfg shuttle"
+  echeneis:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # tag=v7.0.0
+        with:
+          submodules: true
+      - name: Install stable
+        uses: dtolnay/rust-toolchain@e97e2d8cc328f1b50210efc529dca0028893a2d9 # branch=master
+        with:
+          toolchain: stable
+      - name: cargo test echeneis
+        run: cargo test --lib --all-features
+        env:
+          RUSTFLAGS: "--cfg echeneis"

@@ -1,5 +1,15 @@
 [template]
-exclude = [
-  ".github/**",
-]
-ignore = ["LICENSE", "./.github/build.yml"]
+# Required variables - no defaults provided
+# crate_name = ""
+# authors = ""
+# description = ""
+
+# Optional variables with defaults
+license = "MIT"
+repository = ""
+documentation = ""
+rust_version = "1.85.0"
+year = ""
+
+# Cargo-generate will automatically fill in `year` with the current year if not provided
+# but we define it here for completeness

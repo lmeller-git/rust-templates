@@ -1,4 +1,4 @@
-# rust-template-no_std-lib
+# {{crate_name}}
 
 This repository contains an opinionated template for rust libraries. It is aimed at concurrency related libraries. Some workflows may have to be adjusted for your usecase.
 
@@ -7,5 +7,5 @@ This repository contains an opinionated template for rust libraries. It is aimed
 This repo may be used as a template via cargo-generate.
 
 ```bash
-cargo generate lmeller-git/rust-templates --branch lib-no_std --name <your-crate-name>
+cargo generate lmeller-git/rust-templates --branch lib-concurrency-no_std --name <your-crate-name>
 ```

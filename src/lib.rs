@@ -1,12 +1,15 @@
-#![cfg_attr(not(feature = "std"), no_std)]
+//! {{description}}
 
-#[cfg(not(feature = "std"))]
+#![cfg_attr(not(any(feature = "std", test)), no_std)]
+#![deny(missing_docs)]
+#![deny(clippy::missing_safety_doc, clippy::undocumented_unsafe_blocks)]
+#![warn(unsafe_op_in_unsafe_fn)]
+
+#[cfg(any(feature = "std", test))]
+extern crate std;
+
+#[allow(unused_extern_crates)]
+#[cfg(any(feature = "alloc", test))]
 extern crate alloc;
 
 mod sync;
-#[cfg(test)]
-mod tests;
-
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
-}
