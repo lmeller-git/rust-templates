@@ -1,4 +1,4 @@
-# rust-template-no_std-bin
+# {{crate_name}}
 
 This repository contains an opinionated template for no_std rust bins. Some workflows may have to be adjusted for your usecase.
 

@@ -5,7 +5,7 @@
 #[unsafe(no_mangle)]
 extern "C" fn _start() -> ! {
     loop {
-        bin_template::sync::hint::spin_loop();
+        {{crate_name}}::sync::hint::spin_loop();
     }
 }
 
