@@ -1,4 +1,4 @@
-# rust-template-no_std-lib
+# {{crate_name}}
 
 This repository contains an opinionated template for rust libraries. It is aimed at concurrency related libraries. Some workflows may have to be adjusted for your usecase.
 
