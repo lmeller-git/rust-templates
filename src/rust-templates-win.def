@@ -1,2 +1,2 @@
 EXPORTS
-R_init_rust-templates
+R_init_{{crate_name}}

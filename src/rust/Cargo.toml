@@ -7,20 +7,11 @@ default-members = [
   "crates/*"
 ]
 
-[workspace]
-resolver = "3"
-members = [
-  "crates/*"
-]
-default-members = [
-  "crates/*"
-]
-
 [workspace.package]
 version = "0.1.0"
-authors = []
+authors = ["{{authors}}"]
 edition = "2024"
-license = "MIT"
+license = "{{license}}"
 
 [workspace.dependencies]
 anyhow = "1.0.102"

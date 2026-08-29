@@ -2,7 +2,7 @@
 
 #' @docType package
 #' @usage NULL
-#' @useDynLib rust-templates, .registration = TRUE
+#' @useDynLib {{crate_name}}, .registration = TRUE
 NULL
 
 #' Return string `"Hello world!"` to R.

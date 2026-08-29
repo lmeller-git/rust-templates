@@ -1,5 +1,5 @@
 [package]
-name = 'rust-templates'
+name = "{{crate_name}}"
 publish = false
 rust-version = '1.65'
 version.workspace = true
@@ -9,7 +9,7 @@ license.workspace = true
 
 [lib]
 crate-type = [ 'staticlib' ]
-name = 'rust-templates'
+name = "{{crate_name}}"
 
 [dependencies]
 extendr-api = '0.8.1'

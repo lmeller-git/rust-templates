@@ -1,1 +1,11 @@
 [template]
+# Required variables - no defaults provided
+# crate_name = ""
+# authors = ""
+
+# Optional variables with defaults
+license = "MIT"
+year = ""
+
+# Cargo-generate will automatically fill in `year` with the current year if not provided
+# but we define it here for completeness
