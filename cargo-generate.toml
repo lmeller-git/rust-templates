@@ -9,3 +9,6 @@ repository = ""
 documentation = ""
 year = ""
 
+# Exclude GitHub workflows from templating (they contain ${{ }} GitHub Actions syntax)
+exclude = [".github/**"]
+
