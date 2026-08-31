@@ -5,7 +5,7 @@
 #[unsafe(no_mangle)]
 extern "C" fn _start() -> ! {
     loop {
-        {{crate_name}}::sync::hint::spin_loop();
+        {{crate_name | snake_case}}::sync::hint::spin_loop();
     }
 }
 
