@@ -9,3 +9,6 @@ year = ""
 
 # Cargo-generate will automatically fill in `year` with the current year if not provided
 # but we define it here for completeness
+
+# Exclude GitHub workflows from templating (they contain ${{ }} GitHub Actions syntax)
+exclude = [".github/**"]
