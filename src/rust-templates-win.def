@@ -1,2 +1,2 @@
 EXPORTS
-R_init_{{crate_name}}
+R_init_{{crate_name | snake_case}}

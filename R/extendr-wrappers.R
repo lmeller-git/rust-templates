@@ -2,7 +2,7 @@
 
 #' @docType package
 #' @usage NULL
-#' @useDynLib {{crate_name}}, .registration = TRUE
+#' @useDynLib {{crate_name | snake_case}}, .registration = TRUE
 NULL
 
 #' Return string `"Hello world!"` to R.

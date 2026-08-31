@@ -1,7 +1,7 @@
 TARGET_DIR = ./rust/target
 LIBDIR = $(TARGET_DIR)/@LIBDIR@
-STATLIB = $(LIBDIR)/lib{{crate_name}}.a
-PKG_LIBS = -L$(LIBDIR) -l{{crate_name}}
+STATLIB = $(LIBDIR)/lib{{crate_name | snake_case}}.a
+PKG_LIBS = -L$(LIBDIR) -l{{crate_name | snake_case}}
 
 all: $(SHLIB) rust_clean
 

@@ -9,7 +9,7 @@ license.workspace = true
 
 [lib]
 crate-type = [ 'staticlib' ]
-name = "{{crate_name}}"
+name = "{{crate_name | snake_case}}"
 
 [dependencies]
 extendr-api = '0.8.1'
