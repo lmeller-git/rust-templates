@@ -13,3 +13,9 @@ extern crate std;
 extern crate alloc;
 
 mod sync;
+#[cfg(test)]
+mod tests;
+
+pub fn add(n1: i32, n2: i32) -> i32 {
+    n1 + n2
+}
