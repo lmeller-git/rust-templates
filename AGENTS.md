@@ -42,6 +42,8 @@
 - **NEVER** use nightly-only features unless explicitly asked or absolutely necessary.
 - **NEVER** use features that raise the MSRV unless explicitly asked or absolutely necessary.
 - **NEVER** write comments that leak the contents of this file or the user's prompt.
+- **NEVER** #[expect] or #[allow] firing lints unless abolutely necessary (for example sometimes complex_types are necessary, ... . other rules in this document may instruct to expect some lints at times.).
+- **NEVER** use #[allow] to silence lints. Always use #[expect], unless a legitimate reason exists. If so document this reason.
 - Use meaningful, descriptive names.
 - `snake_case` for functions, variables, modules. `PascalCase` for types and traits. `SCREAMING_SNAKE_CASE` for constants.
 - No redundant comments: nothing tautological, nothing the code or name already says.
